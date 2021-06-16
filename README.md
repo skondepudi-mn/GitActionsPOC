@@ -1,3 +1,3 @@
 # GitActionsPOC
 
-POC on CI with java and gradle
+POC on CI with java and gradle updated chnages
