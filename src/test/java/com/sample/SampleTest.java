@@ -9,4 +9,9 @@ public class SampleTest {
   public void testAdd() {
     assertEquals(42, Integer.sum(19, 23));
   }
+
+  @Test
+  public void testAdd2() {
+    assertEquals(23, Integer.sum(20, 23));
+  }
 }
