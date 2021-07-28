@@ -24,5 +24,10 @@ test {
 }
 
 jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
+    dependsOn test
+    reports {
+        csv.enabled true
+        csv.destination file("${buildDir}/reports/jacoco/jacoco.csv")
+    }// tests are required to run before generating the report
 }
+
