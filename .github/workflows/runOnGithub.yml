@@ -4,8 +4,7 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - src/**
+
 
 jobs:
   build:
@@ -19,11 +18,19 @@ jobs:
           distribution: 'adopt'
       - name: Build with Gradle
         run: ./gradlew build
+        run: mkdir -p path/to/artifact
+        run: echo hello > path/to/artifact/world.txt
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: path/to/artifact/world.txt
+
       - name: Generate JaCoCo Badge
         uses: cicirello/jacoco-badge-generator@v2
         with:
           generate-branches-badge: true
           jacoco-csv-file: build/reports/jacoco/jacoco.csv 
-
+      
 
 
