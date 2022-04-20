@@ -1,5 +1,4 @@
-PACKAGE INFO
-============
+# PACKAGE INFO
 
 This is build folder contains the final prod artifacts
 
