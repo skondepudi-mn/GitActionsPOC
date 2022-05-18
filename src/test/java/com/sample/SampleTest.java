@@ -7,7 +7,7 @@ public class SampleTest {
 
   @Test
   public void testAdd() {
-    assertEquals(42, Integer.sum(19, 21));
+    assertEquals(42, Integer.sum(19, 23));
   }
 
   @Test
